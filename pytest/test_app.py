@@ -5,7 +5,7 @@ def add(x, y):
     return x + y
 
 def test_add():
-    assert add(5, 6) == 31
+    assert add(5, 6) == 11
 
 def test_app():
     r = requests.get("http://shay.freeddns.org:8888")
