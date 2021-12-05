@@ -1,6 +1,6 @@
 pipeline {
     
-    agent { label 'labelName' }
+    agent { label 'centos' }
     options { timeout(time: 2, unit: 'MINUTES') }
     
     stages {
