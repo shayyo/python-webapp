@@ -1,6 +1,7 @@
 pipeline {
     agent { label 'centos-slave-nod' }
-
+    options { timeout(time: 2, unit: 'MINUTES') }
+    
     stages {
         stage('Build') {
             steps {
