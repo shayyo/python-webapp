@@ -12,6 +12,8 @@ pipeline {
         stage('Test') {
             steps {
                 echo 'Testing...'
+                sh 'sudo sh'
+                sh 'sleep 2'
                 sh 'sudo docker-compose up --no-color --build --exit-code-from pytest'
             }
         }
