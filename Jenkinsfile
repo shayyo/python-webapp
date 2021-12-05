@@ -21,7 +21,7 @@ pipeline {
         stage('Build Information....') {
             steps {
                 echo 'BUILD INFORMATION'
-                echo "${env}"
+                echo "${JENKINS_URL}"
             }
         }
     }
