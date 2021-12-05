@@ -1,5 +1,5 @@
 pipeline {
-    agent centos-slave-nod
+    agent centos-slave-node
 
     stages {
         stage('Build') {
