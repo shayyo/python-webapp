@@ -22,6 +22,7 @@ pipeline {
             steps {
                 echo 'BUILD INFORMATION'
                 echo "${JENKINS_URL}"
+                echo "${BUILD_URL}"
             }
         }
     }
