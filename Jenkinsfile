@@ -12,7 +12,7 @@ pipeline {
         stage('Test') {
             steps {
                 echo 'Testing...'
-                sh 'docker-compose up --no-color --build --exit-code-from pytest'
+                sh 'sudo docker-compose up --no-color --build --exit-code-from pytest'
             }
         }
         stage('Deploy') {
