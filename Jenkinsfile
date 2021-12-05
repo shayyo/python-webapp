@@ -5,8 +5,6 @@ pipeline {
         stage('Build') {
             steps {
                 echo 'Building...'
-                echo "${JENKINS_URL}"
-                
             }
         }
         stage('Test') {
@@ -18,6 +16,11 @@ pipeline {
         stage('Deploy') {
             steps {
                 echo 'Deploying.....'
+            }
+        }
+        stage('Build Information....') {
+            steps {
+                echo 'BUILD INFORMATION'
             }
         }
     }
