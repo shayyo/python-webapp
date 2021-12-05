@@ -5,6 +5,7 @@ pipeline {
         stage('Build') {
             steps {
                 echo 'Building...'
+                echo '${YOUR_JENKINS_URL}'
             }
         }
         stage('Test') {
