@@ -7,7 +7,6 @@ pipeline {
         stage('Build') {
             steps {
                 echo 'Building....'
-                echo 'Building....'
             }
         }
         stage('Test') {
@@ -31,6 +30,7 @@ pipeline {
                     --instance-type t2.micro \
                     --key-name CNDR_key  \
                     --tag-specifications "ResourceType=instance,Tags=[{Key=jenkins,Value=jenkins}]" > aws_instance_details.txt'
+                sh 'cat aws_instance_details.txt'
                 }
             }
         }
