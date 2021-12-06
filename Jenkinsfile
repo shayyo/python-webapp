@@ -26,5 +26,13 @@ pipeline {
                 echo "Build results can be found in here ${BUILD_URL}"
             }
         }
+        
+        stage('hello') {
+            steps {    
+                withAWS(credentials: 'aws-cred', region: 'eu-central-1') {
+                sh 'aws ec2 describe-instances'
+                }
+            }
+        }
     }
 }
