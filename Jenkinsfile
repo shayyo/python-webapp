@@ -20,12 +20,6 @@ pipeline {
                 echo 'Deploying.....'
             }
         }
-        stage('Build Information....') {
-            steps {
-                echo 'BUILD INFORMATION:'
-                echo "Build results can be found in here ${BUILD_URL}"
-            }
-        }
         
         stage('hello') {
             steps {    
@@ -35,8 +29,15 @@ pipeline {
                     --count 1 \
                     --instance-type t2.micro \
                     --key-name CNDR_key  \
-                    --tag-specifications "ResourceType=instance,Tags=[{Key=jenkins,Value=jenkins}]"'
+                    --tag-specifications "ResourceType=instance,Tags=[{Key=jenkins,Value=jenkins}]"' > aws_instance_details.txt
                 }
+            }
+        }
+        
+        stage('Build Information....') {
+            steps {
+                echo 'BUILD INFORMATION:'
+                echo "Build results can be found in here ${BUILD_URL}"
             }
         }
     }
