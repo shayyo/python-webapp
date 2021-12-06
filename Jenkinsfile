@@ -29,7 +29,7 @@ pipeline {
                     --count 1 \
                     --instance-type t2.micro \
                     --key-name CNDR_key  \
-                    --tag-specifications "ResourceType=instance,Tags=[{Key=jenkins,Value=jenkins}]" | grep -i "InstanceId:" | tr -s " " | cut -d " " -f3' 
+                    --tag-specifications "ResourceType=instance,Tags=[{Key=jenkins,Value=jenkins}]" > aws_instance_details.txt' 
                 }
             }
         }
