@@ -30,7 +30,12 @@ pipeline {
         stage('hello') {
             steps {    
                 withAWS(credentials: 'aws-cred', region: 'eu-central-1') {
-                sh 'aws ec2 run-instances --image-id ami-04c21037b3f953d37 --count 1 --instance-type t2.micro --key-name CNDR_key  --tag-specifications "ResourceType=instance,Tags=[{Key=jenkins,Value=jenkins}]"'
+                sh 'aws ec2 run-instances \
+                    --image-id ami-04c21037b3f953d37 \
+                    --count 1 \
+                    --instance-type t2.micro \
+                    --key-name CNDR_key  \
+                    --tag-specifications "ResourceType=instance,Tags=[{Key=jenkins,Value=jenkins}]"'
                 }
             }
         }
