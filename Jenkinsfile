@@ -32,7 +32,7 @@ pipeline {
                     --tag-specifications "ResourceType=instance,Tags=[{Key=jenkins,Value=jenkins}]" > aws_instance_details.txt' 
                 }
                 aws_instance_id = sh 'cat aws_instance_details.txt | grep -i "InstanceId:" | tr -s " " | cut -d " " -f3'
-                sh 'echo ${aws_instance_id}'
+                sh 'echo "${aws_instance_id}"'
             }
         }
         
