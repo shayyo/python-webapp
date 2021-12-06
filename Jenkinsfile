@@ -31,7 +31,6 @@ pipeline {
                     --key-name CNDR_key  \
                     --tag-specifications "ResourceType=instance,Tags=[{Key=jenkins,Value=jenkins}]" > aws_instance_details.txt'
                 }
-                environment { instanceid = sh 'cat aws_instance_details.txt | grep -i "InstanceId:" | tr -s " " | cut -d " " -f3' }
             }
         }
         
