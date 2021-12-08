@@ -21,7 +21,7 @@ pipeline {
             }
         }
         
-        stage('hello') {
+        stage('Create AWS EC2 VM') {
             steps {    
                 withAWS(credentials: 'aws-cred', region: 'eu-central-1') {
                 sh 'aws ec2 run-instances \
