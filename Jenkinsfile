@@ -20,9 +20,9 @@ pipeline {
                 echo 'Deploying.....'
             }
         }
-        
+        /*
         stage('Create AWS EC2 VM') {
-            steps {    
+            steps {
                 withAWS(credentials: 'aws-cred', region: 'eu-central-1') {
                 sh 'aws ec2 run-instances \
                     --image-id ami-04c21037b3f953d37 \
@@ -41,6 +41,7 @@ pipeline {
                 }
             }
         }
+        */
         
         stage('Build Information....') {
             steps {
