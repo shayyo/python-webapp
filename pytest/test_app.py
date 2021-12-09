@@ -8,7 +8,7 @@ def test_add():
     assert add(5, 6) == 11
 
 def test_add2():
-    assert add(15, 16) == 30
+    assert add(15, 16) == 31
 
 def test_app():
     r = requests.get("http://web:5000")
