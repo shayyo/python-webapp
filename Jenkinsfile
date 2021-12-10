@@ -7,7 +7,7 @@ pipeline {
         stage('Build') {
             steps {
                 echo "Building....echo"
-                ecgo 'echo "Building....sh"'
+                sh 'echo "Building....sh"'
             }
         }
         stage('Test') {
