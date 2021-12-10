@@ -6,8 +6,8 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                echo "Building....echo"
-                sh 'echo "Building....sh"'
+                echo "Building.....echo"
+                sh 'echo "Building.....sh"'
             }
         }
         stage('Test') {
