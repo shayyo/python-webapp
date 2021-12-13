@@ -5,7 +5,7 @@ def add(x, y):
     return x + y
 
 def test_add():
-    assert add(5, 6) == 119
+    assert add(5, 6) == 11
 
 def test_add2():
     assert add(15, 16) == 31
