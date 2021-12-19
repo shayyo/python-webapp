@@ -44,7 +44,7 @@ pipeline {
         }
         */
         
-        stage('Build Information....') {
+        stage('Build Information.....') {
             steps {
                 echo 'BUILD INFORMATION:'
                 echo "Build results can be found in here ${BUILD_URL}"
