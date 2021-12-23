@@ -21,7 +21,7 @@ pipeline {
                 echo 'Deploying.....'
             }
         }
-        */
+        /*
         stage('Create AWS EC2 VM') {
             steps {
                 withAWS(credentials: 'aws-cred', region: 'eu-central-1') {
@@ -42,7 +42,7 @@ pipeline {
                 }
             }
         }
-        /*
+        */
         
         stage('Build Information.....') {
             steps {
