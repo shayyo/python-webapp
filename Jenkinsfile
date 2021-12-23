@@ -3,7 +3,6 @@ pipeline {
     agent { label 'centos' }
     options { 
         timeout(time: 2, unit: 'MINUTES')
-        ansiColor('xterm')
     }
     
     stages {
