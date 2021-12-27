@@ -14,7 +14,7 @@ def test_add3():
     assert add(151, 161) == 312
 
 def test_true():
-    assert true == true
+    assert True == True
 
 def test_app():
     r = requests.get("http://web:5000")
