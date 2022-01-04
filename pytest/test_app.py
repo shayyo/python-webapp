@@ -21,9 +21,9 @@ def test_app():
     r = requests.get("http://web:5000")
     assert r.status_code == 200
     assert "Hello World I have been seen" in r.text
-    print(r.text)
 
 def test_re():
-    #pattern = "^[a-zA-Z ]{1,}[0-9]{1,}$"
-    #assert re.match(pattern, r.text)
-    pass
+    r = requests.get("http://web:5000")
+    assert r.status_code == 200
+    pattern = "^[a-zA-Z ]{1,}[0-9]{1,} times.$"
+    assert re.match(pattern, r.text)
