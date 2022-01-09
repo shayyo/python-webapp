@@ -32,7 +32,7 @@ pipeline {
                     --image-id ami-04c21037b3f953d37 \
                     --count 1 \
                     --instance-type t2.micro \
-                    --key-name CNDR_key  \
+                    --key-name MY_key  \
                     --tag-specifications "ResourceType=instance,Tags=[{Key=jenkins,Value=jenkins}]" > aws_instance_details.txt'
                 
                 script {
